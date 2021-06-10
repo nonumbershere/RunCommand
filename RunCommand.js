@@ -22,12 +22,12 @@ var RunCommand = {
 		 }
 	  }
    },
-   run_commandSes: function() {
+   run_commandSes: function(command) {
       for (var i = 0; i < this.commands.length; ++i) {
 	  if (this.commands[i] == null) {
 	  
 	  } else {
-	      if (command == this.prefix+this.commands[i].command) {
+	      if (command.toLowerCase() == this.prefix+this.commands[i].command.toLowerCase()) {
 		     this.commands[i].do();
 		  }
 		}
